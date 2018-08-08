@@ -102,7 +102,7 @@ func (p *Producer) Listen() {
 				}
 
 				p.conn.Publish(subj, data)
-				p.conn.Flush()
+				//p.conn.Flush()
 
 				if err := p.conn.LastError(); err != nil {
 					panic("Error publising to NATS, error: "+ err.Error())
